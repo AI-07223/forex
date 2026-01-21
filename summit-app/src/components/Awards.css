@@ -1,160 +1,183 @@
 .awards {
-    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background: linear-gradient(180deg, var(--bg-primary) 0%, #fff7ed 100%);
     position: relative;
-    overflow: hidden;
 }
 
-.awards-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+/* Decorative Elements */
+.awards::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(252, 196, 25, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.awards::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+/* Awards Header */
+.awards-header {
+    text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.awards-icon {
+    display: inline-flex;
     align-items: center;
-}
-
-.awards-info {
-    padding-right: 32px;
-}
-
-.awards-description {
-    font-size: 1.125rem;
-    color: #94a3b8;
-    line-height: 1.7;
-    margin-top: 24px;
-    margin-bottom: 32px;
-}
-
-.awards-highlights {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-}
-
-.highlight-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 100px;
-    font-size: 0.9375rem;
-    color: #e2e8f0;
-}
-
-.highlight-icon {
-    font-size: 1.25rem;
-}
-
-.awards-note {
-    font-size: 0.9375rem;
-    color: #64748b;
-    font-style: italic;
-}
-
-/* Categories */
-.awards-categories h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #fff;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #fcc419, #ff6b6b);
+    border-radius: 50%;
+    color: #ffffff;
     margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(252, 196, 25, 0.3);
 }
 
+.awards-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.awards-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+}
+
+/* Categories Grid */
 .categories-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
 }
 
 .category-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(251, 191, 36, 0.02) 100%);
-    border: 1px solid rgba(251, 191, 36, 0.15);
-    border-radius: 14px;
+    padding: 28px;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .category-card:hover {
-    border-color: rgba(251, 191, 36, 0.4);
-    transform: translateX(4px);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    border-color: rgba(252, 196, 25, 0.3);
 }
 
 .category-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.05));
-    border-radius: 12px;
-    color: #fbbf24;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, rgba(252, 196, 25, 0.2), rgba(255, 107, 107, 0.1));
+    border-radius: 14px;
+    color: #fcc419;
+}
+
+.category-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Gala Info */
+.gala-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.gala-card {
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(252, 196, 25, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
+    border: 1px solid rgba(252, 196, 25, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(252, 196, 25, 0.1);
+}
+
+.gala-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.gala-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gala-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: #475569;
+}
+
+.gala-highlight svg {
+    color: #fcc419;
     flex-shrink: 0;
 }
 
-.category-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 4px;
-}
-
-.category-card p {
-    font-size: 0.8125rem;
+.gala-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9375rem;
     color: #64748b;
+    margin-bottom: 12px;
 }
 
-/* Decoration */
-.awards-decoration {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.trophy-glow {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
-    filter: blur(60px);
+.gala-details svg {
+    color: #ff6b6b;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .awards-content {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .awards-info {
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .awards-highlights {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .awards-highlights {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .highlight-item {
-        justify-content: center;
-    }
-
     .categories-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gala-info {
+        grid-template-columns: 1fr;
+    }
+
+    .awards-title {
+        font-size: 2rem;
     }
 }

@@ -1,269 +1,214 @@
 .schedule {
-    background: var(--bg-primary);
-    position: relative;
+    background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
 }
 
-/* Tabs */
+/* Day Tabs */
 .schedule-tabs {
     display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
     justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
 }
 
 .schedule-tab {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 40px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
+    padding: 14px 28px;
+    background: var(--bg-primary);
+    border: 2px solid var(--glass-border);
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #64748b;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .schedule-tab:hover {
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 107, 107, 0.3);
+    color: #ff6b6b;
 }
 
 .schedule-tab.active {
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.05) 100%);
-    border-color: rgba(251, 191, 36, 0.4);
-    box-shadow: 0 8px 32px rgba(251, 191, 36, 0.15);
-}
-
-.tab-day {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.schedule-tab.active .tab-day {
-    color: #fbbf24;
+    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
 }
 
 .tab-date {
-    font-size: 0.8125rem;
-    color: #64748b;
-    margin-top: 4px;
-}
-
-/* Schedule Content */
-.schedule-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.schedule-header-card {
-    padding: 32px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    border-radius: 20px;
-    margin-bottom: 32px;
-    text-align: center;
-}
-
-.theme-label {
+    display: block;
     font-size: 0.75rem;
-    font-weight: 600;
-    color: #3b82f6;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.theme-title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #fff;
-    margin: 8px 0;
-}
-
-.theme-focus {
-    font-size: 1rem;
-    color: #94a3b8;
+    font-weight: 500;
+    color: inherit;
+    opacity: 0.8;
+    margin-top: 2px;
 }
 
 /* Timeline */
-.schedule-timeline {
+.schedule-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.day-content {
+    display: none;
+}
+
+.day-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline {
     position: relative;
-    padding-left: 120px;
+    padding-left: 32px;
 }
 
-.timeline-day-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #fbbf24;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 24px;
-    margin-left: -120px;
-}
-
-.timeline-day-label.evening {
-    margin-top: 40px;
-    color: #8b5cf6;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #ff6b6b 0%, #fcc419 50%, #20c997 100%);
+    border-radius: 1px;
 }
 
 .timeline-item {
     position: relative;
-    display: flex;
-    align-items: center;
-    padding: 16px 0;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
-    margin-left: 0;
+    padding: 24px 32px;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-item:hover {
+    border-color: rgba(255, 107, 107, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 32px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, #ff6b6b, #fcc419);
+    border: 3px solid var(--bg-primary);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
 }
 
 .timeline-time {
-    position: absolute;
-    left: -120px;
-    width: 100px;
-    text-align: right;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9375rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
     font-weight: 600;
-    color: #64748b;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -7px;
-    width: 12px;
-    height: 12px;
-    background: #fbbf24;
-    border-radius: 50%;
-    border: 3px solid var(--bg-primary);
-}
-
-.timeline-content {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px 24px;
-    margin-left: 24px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    flex: 1;
-    transition: all 0.3s ease;
-}
-
-.timeline-content:hover {
-    border-color: rgba(251, 191, 36, 0.3);
-    transform: translateX(4px);
-}
-
-.timeline-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(251, 191, 36, 0.1);
-    border-radius: 10px;
-    color: #fbbf24;
+    color: #ff6b6b;
+    margin-bottom: 8px;
 }
 
 .timeline-title {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #e2e8f0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
 }
 
-/* Evening Card */
-.timeline-evening {
-    margin-top: 24px;
-    margin-left: 0;
-    border-left: none;
+.timeline-description {
+    font-size: 0.9375rem;
+    color: #64748b;
 }
 
-.evening-card {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 32px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 20px;
-    margin-left: -120px;
-}
-
-.evening-icon {
+.timeline-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
-    background: rgba(139, 92, 246, 0.2);
-    border-radius: 16px;
-    color: #a78bfa;
-    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(252, 196, 25, 0.1));
+    border-radius: 10px;
+    color: #ff6b6b;
+}
+
+/* Evening Event */
+.evening-event {
+    margin-top: 40px;
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(252, 196, 25, 0.05) 100%);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.08);
+}
+
+.evening-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
 }
 
 .evening-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #fff;
+    color: #1e293b;
     margin-bottom: 8px;
 }
 
 .evening-description {
     font-size: 0.9375rem;
-    color: #94a3b8;
-    line-height: 1.5;
+    color: #64748b;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .schedule-tabs {
         flex-direction: column;
+        gap: 8px;
     }
 
     .schedule-tab {
-        padding: 16px 24px;
-        flex-direction: row;
-        justify-content: space-between;
+        width: 100%;
+        text-align: center;
     }
 
-    .schedule-timeline {
-        padding-left: 0;
-    }
-
-    .timeline-day-label {
-        margin-left: 0;
-    }
-
-    .timeline-time {
-        position: static;
-        width: auto;
-        text-align: left;
-        margin-bottom: 8px;
+    .timeline {
+        padding-left: 24px;
     }
 
     .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        border-left: none;
-        padding: 0;
-        margin-bottom: 16px;
+        padding: 20px;
     }
 
-    .timeline-dot {
+    .timeline-icon {
         display: none;
-    }
-
-    .timeline-content {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .evening-card {
-        margin-left: 0;
-        flex-direction: column;
-        text-align: center;
     }
 }

@@ -1,5 +1,5 @@
 .about {
-    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
 /* Vision Card */
@@ -9,10 +9,11 @@
     justify-content: space-between;
     gap: 48px;
     padding: 48px 56px;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 100%);
-    border: 1px solid rgba(251, 191, 36, 0.2);
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(252, 196, 25, 0.05) 100%);
+    border: 1px solid rgba(255, 107, 107, 0.15);
     border-radius: 24px;
     margin-bottom: 64px;
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.08);
 }
 
 .vision-content {
@@ -22,7 +23,7 @@
 .vision-label {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #fbbf24;
+    color: #ff6b6b;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 16px;
@@ -31,12 +32,12 @@
 .vision-text {
     font-size: 1.75rem;
     font-weight: 600;
-    color: #e2e8f0;
+    color: #1e293b;
     line-height: 1.4;
 }
 
 .vision-text .highlight {
-    color: #fbbf24;
+    color: #ff6b6b;
 }
 
 .vision-stats {
@@ -50,17 +51,20 @@
 
 .vision-stat-value {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    color: #fff;
+    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
 }
 
 .vision-stat-label {
     display: block;
     font-size: 0.8125rem;
-    color: #94a3b8;
+    color: #64748b;
     margin-top: 8px;
 }
 
@@ -73,17 +77,18 @@
 
 .feature-card {
     padding: 32px;
-    background: var(--glass-bg);
+    background: var(--bg-primary);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .feature-card:hover {
-    border-color: rgba(251, 191, 36, 0.3);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 107, 107, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -92,22 +97,22 @@
     justify-content: center;
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(252, 196, 25, 0.1) 100%);
     border-radius: 16px;
-    color: #fbbf24;
+    color: #ff6b6b;
     margin-bottom: 20px;
 }
 
 .feature-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #fff;
+    color: #1e293b;
     margin-bottom: 12px;
 }
 
 .feature-description {
     font-size: 0.9375rem;
-    color: #94a3b8;
+    color: #64748b;
     line-height: 1.6;
 }
 
