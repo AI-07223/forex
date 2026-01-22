@@ -140,6 +140,7 @@
     border: 1px solid rgba(44, 71, 145, 0.1);
     border-radius: 20px;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .travel-card:hover {
@@ -157,6 +158,7 @@
 .travel-card ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -165,6 +167,7 @@
     color: var(--text-secondary);
     padding-left: 20px;
     position: relative;
+    display: inline-block;
 }
 
 .travel-card li::before {
