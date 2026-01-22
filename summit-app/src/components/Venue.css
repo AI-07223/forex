@@ -132,6 +132,155 @@
     color: var(--text-muted);
 }
 
+/* Floor Plans Section */
+.floor-plans-section {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.floor-plans-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    margin-bottom: 12px;
+}
+
+.floor-plans-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.floor-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.floor-plan-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(44, 71, 145, 0.08);
+}
+
+.floor-plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(44, 71, 145, 0.12);
+    border-color: rgba(218, 171, 31, 0.3);
+}
+
+.floor-plan-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.floor-plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    padding: 16px;
+}
+
+.floor-plan-card:hover .floor-plan-image img {
+    transform: scale(1.05);
+}
+
+.floor-plan-content {
+    padding: 24px;
+    text-align: left;
+}
+
+.floor-plan-content h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.floor-plan-content p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.floor-plan-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.highlight-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.highlight-badge.official {
+    background: #8B1A1A;
+    color: #ffffff;
+}
+
+.highlight-badge.exclusive {
+    background: #E91E63;
+    color: #ffffff;
+}
+
+.highlight-badge.diamond-plus {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+.highlight-badge.diamond {
+    background: #2C4791;
+    color: #ffffff;
+}
+
+.highlight-badge.platinum {
+    background: #FFD700;
+    color: #1a1a1a;
+}
+
+.highlight-badge.gold {
+    background: #F59E0B;
+    color: #ffffff;
+}
+
+.highlight-badge.silver {
+    background: #9CA3AF;
+    color: #ffffff;
+}
+
+.highlight-badge.bronze {
+    background: #A67C52;
+    color: #ffffff;
+}
+
+.highlight-badge.blue {
+    background: linear-gradient(135deg, #2C4791, #3d5ca8);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .floor-plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floor-plan-content {
+        padding: 20px;
+    }
+}
+
 /* Travel Info */
 .travel-info {
     display: grid;

@@ -67,7 +67,51 @@ const Venue = () => {
                     ))}
                 </div>
 
-                {/* Travel Info */}
+                {/* Floor Plans Section */}
+                <div className="floor-plans-section">
+                    <h3 className="floor-plans-title">Exhibition Floor Plans</h3>
+                    <p className="floor-plans-subtitle">
+                        Explore our world-class exhibition halls with 50+ premium booths across multiple categories
+                    </p>
+
+                    <div className="floor-plans-grid">
+                        <div className="floor-plan-card">
+                            <div className="floor-plan-image">
+                                <img src="/images/venue/floor-plan-hall1.jpg" alt="Hall 1 Booth Floor Plan" loading="lazy" />
+                            </div>
+                            <div className="floor-plan-content">
+                                <h4>Hall 1 — Booth Layout</h4>
+                                <p>Premium exhibition space featuring 100+ booths across 7 tiers</p>
+                                <div className="floor-plan-highlights">
+                                    <span className="highlight-badge official">Official</span>
+                                    <span className="highlight-badge exclusive">Exclusive</span>
+                                    <span className="highlight-badge diamond-plus">Diamond+</span>
+                                    <span className="highlight-badge diamond">Diamond</span>
+                                    <span className="highlight-badge platinum">Platinum</span>
+                                    <span className="highlight-badge gold">Gold</span>
+                                    <span className="highlight-badge silver">Silver</span>
+                                    <span className="highlight-badge bronze">Bronze</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="floor-plan-card">
+                            <div className="floor-plan-image">
+                                <img src="/images/venue/floor-plan-hallab.jpg" alt="Hall AB Layout" loading="lazy" />
+                            </div>
+                            <div className="floor-plan-content">
+                                <h4>Hall AB — Conference Space</h4>
+                                <p>2,994 sqm of flexible event space with VIP lounges & secretariat</p>
+                                <div className="floor-plan-highlights">
+                                    <span className="highlight-badge blue">VIP Lounge</span>
+                                    <span className="highlight-badge blue">AV Office</span>
+                                    <span className="highlight-badge blue">Registration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="travel-info">
                     <div className="travel-card">
                         <h4>Getting There</h4>
