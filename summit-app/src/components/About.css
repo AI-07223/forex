@@ -144,16 +144,22 @@
     background: var(--bg-primary);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-align: center;
 }
 
 .feature-card:hover {
-    border-color: rgba(44, 71, 145, 0.2);
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(44, 71, 145, 0.1);
+    border-color: rgba(218, 171, 31, 0.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 48px rgba(44, 71, 145, 0.12);
+}
+
+.feature-card:hover .feature-icon {
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
+    color: #ffffff;
+    transform: scale(1.1) rotate(3deg);
 }
 
 .feature-icon {
@@ -166,6 +172,7 @@
     background: linear-gradient(135deg, rgba(44, 71, 145, 0.1) 0%, rgba(218, 171, 31, 0.08) 100%);
     border-radius: 16px;
     color: var(--brand-blue);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .feature-title {
