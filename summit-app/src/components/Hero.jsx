@@ -205,6 +205,24 @@ const Hero = () => {
                         <span className="stat-label">Days of Excellence</span>
                     </div>
                 </div>
+
+                {/* Video Promo Section */}
+                <div className="hero-video-section">
+                    <div className="video-container">
+                        <div className="video-wrapper">
+                            <iframe
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                                title="Elite Traders Summit 2026 - Promo Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <div className="video-caption">
+                            <span className="video-badge">Watch Promo</span>
+                            <p className="video-subtitle">Experience Elite Traders Summit 2026</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Scroll Indicator */}

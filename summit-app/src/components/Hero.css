@@ -6,10 +6,10 @@
     justify-content: center;
     padding: 120px 0 80px;
     overflow: hidden;
-    background: linear-gradient(180deg, #fff7ed 0%, #ffffff 40%, #f8fafc 100%);
+    background: linear-gradient(180deg, #fef9e7 0%, #ffffff 40%, #f8fafc 100%);
 }
 
-/* Background Effects - Light & Joyful */
+/* Background Effects - Brand Colors */
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -22,7 +22,7 @@
     left: -5%;
     width: 50%;
     height: 50%;
-    background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(44, 71, 145, 0.15) 0%, transparent 70%);
     filter: blur(60px);
     animation: gradientPulse 8s ease-in-out infinite;
 }
@@ -33,7 +33,7 @@
     right: -5%;
     width: 45%;
     height: 45%;
-    background: radial-gradient(circle, rgba(32, 201, 151, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(42, 139, 79, 0.12) 0%, transparent 70%);
     filter: blur(60px);
     animation: gradientPulse 8s ease-in-out 2s infinite;
 }
@@ -44,7 +44,7 @@
     right: 25%;
     width: 35%;
     height: 35%;
-    background: radial-gradient(circle, rgba(252, 196, 25, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(218, 171, 31, 0.18) 0%, transparent 70%);
     filter: blur(50px);
     animation: gradientPulse 8s ease-in-out 4s infinite;
 }
@@ -162,15 +162,15 @@
     align-items: center;
     gap: 10px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.12) 0%, rgba(252, 196, 25, 0.12) 100%);
-    border: 1px solid rgba(255, 107, 107, 0.25);
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.1) 0%, rgba(218, 171, 31, 0.1) 100%);
+    border: 1px solid rgba(44, 71, 145, 0.2);
     border-radius: 100px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #ff6b6b;
+    color: var(--brand-blue);
     margin-bottom: 32px;
     animation: slideUp 0.8s ease-out;
-    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.1);
+    box-shadow: 0 4px 16px rgba(44, 71, 145, 0.1);
 }
 
 .hero-badge svg {
@@ -207,7 +207,7 @@
     line-height: 1;
     margin-bottom: 28px;
     letter-spacing: -0.02em;
-    color: #1e293b;
+    color: var(--brand-blue);
 }
 
 .title-line {
@@ -217,20 +217,28 @@
 
 .title-line:first-child {
     animation-delay: 0.1s;
-    color: #1e293b;
+    background: linear-gradient(135deg, #2C4791 0%, #3d5ca8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .title-line:last-child {
     animation-delay: 0.2s;
+    background: linear-gradient(135deg, #DAAB1F 0%, #c99a0c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #475569;
+    color: #4a5568;
     max-width: 700px;
     margin: 0 auto 40px;
     line-height: 1.7;
     animation: slideUp 0.8s ease-out 0.3s backwards;
+    text-align: center;
 }
 
 /* Info Row */
@@ -249,17 +257,17 @@
     gap: 10px;
     font-size: 1rem;
     font-weight: 500;
-    color: #334155;
+    color: #4a5568;
 }
 
 .info-item svg {
-    color: #ff6b6b;
+    color: var(--brand-blue);
 }
 
 .info-divider {
     width: 6px;
     height: 6px;
-    background: linear-gradient(135deg, #ff6b6b, #fcc419);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     border-radius: 50%;
 }
 
@@ -291,10 +299,10 @@
 }
 
 .hero-stats .stat-value {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -304,7 +312,7 @@
 
 .hero-stats .stat-label {
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-muted);
     margin-top: 8px;
     display: block;
     font-weight: 500;
@@ -338,7 +346,7 @@
 .scroll-wheel {
     width: 4px;
     height: 8px;
-    background: linear-gradient(180deg, #ff6b6b, #fcc419);
+    background: linear-gradient(180deg, #DAAB1F, #c99a0c);
     border-radius: 2px;
     position: absolute;
     top: 6px;
@@ -373,8 +381,67 @@
 
 /* Floating Particles for Light Theme */
 .particles .particle {
-    background: linear-gradient(135deg, #ff6b6b, #fcc419);
-    opacity: 0.4;
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
+    opacity: 0.3;
+}
+
+/* Video Promo Section */
+.hero-video-section {
+    margin-top: 60px;
+    animation: slideUp 0.8s ease-out 0.7s backwards;
+}
+
+.video-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(44, 71, 145, 0.2);
+    border: 2px solid rgba(44, 71, 145, 0.15);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.video-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.video-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
 }
 
 /* Responsive */

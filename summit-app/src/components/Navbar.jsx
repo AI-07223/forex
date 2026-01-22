@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, TrendingUp } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -48,8 +48,7 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <a href="#" className="navbar-logo">
-                    <TrendingUp className="logo-icon" />
-                    <span className="logo-text">ETS<span className="logo-year">2026</span></span>
+                    <img src="/elitelogo.png" alt="Elite Traders Summit 2026" className="logo-image" />
                 </a>
 
                 <div className="navbar-countdown">

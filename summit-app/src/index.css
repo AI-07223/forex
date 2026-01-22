@@ -1,55 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
-/* ===== LIGHT JOYFUL COLOR SYSTEM ===== */
+/* ===== ELITE TRADERS SUMMIT COLOR SYSTEM ===== */
+/* Premium Gold Theme - Lighter & Elegant */
 :root {
   /* Primary - Clean Light Backgrounds */
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --bg-accent: #fff7ed;
+  --bg-secondary: #fffdf5;
+  --bg-tertiary: #fef9e7;
+  --bg-accent: #fff8e1;
 
-  /* Joyful Vibrant Colors */
-  --coral: #ff6b6b;
-  --coral-light: #ffa8a8;
-  --coral-glow: rgba(255, 107, 107, 0.25);
+  /* Brand Colors from Logo */
+  --brand-gold: #DAAB1F;
+  --brand-gold-light: #e6be47;
+  --brand-gold-dark: #c99a0c;
+  --brand-gold-glow: rgba(218, 171, 31, 0.25);
 
-  --teal: #20c997;
-  --teal-light: #63e6be;
-  --teal-glow: rgba(32, 201, 151, 0.25);
+  --brand-blue: #2C4791;
+  --brand-blue-light: #3d5ca8;
+  --brand-blue-glow: rgba(44, 71, 145, 0.2);
 
-  --sunny: #fcc419;
-  --sunny-light: #ffe066;
-  --sunny-glow: rgba(252, 196, 25, 0.3);
+  --brand-green: #2A8B4F;
+  --brand-green-light: #3da563;
+  --brand-green-glow: rgba(42, 139, 79, 0.25);
 
-  /* Chart Colors - Bright & Cheerful */
-  --chart-blue: #4dabf7;
-  --chart-purple: #a78bfa;
-  --chart-pink: #f472b6;
-  --chart-orange: #fb923c;
+  --brand-red: #C63633;
+  --brand-red-light: #d85350;
+  --brand-red-glow: rgba(198, 54, 51, 0.25);
 
-  /* Accent - Vibrant Coral/Orange */
-  --accent-primary: #ff6b6b;
-  --accent-secondary: #f59e0b;
-  --accent-tertiary: #8b5cf6;
-  --accent-glow: rgba(255, 107, 107, 0.2);
+  /* Chart Colors */
+  --chart-gold: #DAAB1F;
+  --chart-blue: #2C4791;
+  --chart-purple: #6366f1;
+  --chart-green: #2A8B4F;
 
-  /* Text - Dark for Light BG */
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  /* Accent - Gold Primary for Lighter Theme */
+  --accent-primary: #DAAB1F;
+  --accent-secondary: #2C4791;
+  --accent-tertiary: #2A8B4F;
+  --accent-glow: rgba(218, 171, 31, 0.2);
 
-  /* Cards & Glass Effects for Light Theme */
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.06);
-  --glass-border-light: rgba(0, 0, 0, 0.1);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  /* Trading Colors */
+  --profit-green: #2A8B4F;
+  --loss-red: #C63633;
 
-  /* Gradients - Warm & Vibrant */
-  --gradient-primary: linear-gradient(135deg, #ff6b6b 0%, #f59e0b 100%);
-  --gradient-secondary: linear-gradient(135deg, #20c997 0%, #4dabf7 100%);
-  --gradient-accent: linear-gradient(135deg, #fcc419 0%, #ff6b6b 100%);
-  --gradient-hero: linear-gradient(180deg, #fff7ed 0%, #ffffff 50%, #f8fafc 100%);
-  --gradient-radial: radial-gradient(ellipse at center, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+  /* Text - Brand Colors instead of black */
+  --text-primary: #2C4791;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+
+  /* Cards & Glass Effects - Warm Light Theme */
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(218, 171, 31, 0.12);
+  --glass-border-light: rgba(218, 171, 31, 0.18);
+  --card-shadow: 0 4px 24px rgba(218, 171, 31, 0.08);
+
+  /* Gradients - Gold Primary Theme */
+  --gradient-primary: linear-gradient(135deg, #DAAB1F 0%, #e6be47 100%);
+  --gradient-secondary: linear-gradient(135deg, #2C4791 0%, #3d5ca8 100%);
+  --gradient-accent: linear-gradient(135deg, #DAAB1F 0%, #c99a0c 100%);
+  --gradient-gold: linear-gradient(135deg, #DAAB1F 0%, #e6be47 100%);
+  --gradient-hero: linear-gradient(180deg, #fff8e1 0%, #ffffff 50%, #fffdf5 100%);
+  --gradient-radial: radial-gradient(ellipse at center, rgba(218, 171, 31, 0.1) 0%, transparent 70%);
+  --gradient-profit: linear-gradient(135deg, #2A8B4F 0%, #3da563 100%);
 
   /* Spacing */
   --section-padding: 120px;
@@ -83,7 +95,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -96,7 +108,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 107, 107, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(44, 71, 145, 0.06) 1px, transparent 1px);
   background-size: 30px 30px;
   pointer-events: none;
   z-index: 0;
@@ -107,7 +119,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.03) 0%, rgba(252, 196, 25, 0.02) 50%, rgba(32, 201, 151, 0.03) 100%);
+  background: linear-gradient(135deg, rgba(44, 71, 145, 0.02) 0%, rgba(218, 171, 31, 0.02) 50%, rgba(42, 139, 79, 0.02) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -123,7 +135,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-primary);
@@ -166,6 +178,9 @@ button {
 .section-header {
   text-align: center;
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-badge {
@@ -173,19 +188,20 @@ button {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(252, 196, 25, 0.1) 100%);
-  border: 1px solid rgba(255, 107, 107, 0.2);
+  background: linear-gradient(135deg, rgba(44, 71, 145, 0.1) 0%, rgba(218, 171, 31, 0.1) 100%);
+  border: 1px solid rgba(44, 71, 145, 0.2);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--coral);
+  color: var(--brand-blue);
   margin-bottom: 20px;
 }
 
 .section-title {
   font-size: clamp(2.5rem, 5vw, 3.75rem);
   margin-bottom: 20px;
-  color: var(--text-primary);
+  color: var(--brand-blue);
+  text-align: center;
 }
 
 .section-subtitle {
@@ -193,6 +209,7 @@ button {
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* ===== BUTTONS ===== */
@@ -212,12 +229,12 @@ button {
 .btn-primary {
   background: var(--gradient-primary);
   color: #ffffff;
-  box-shadow: 0 4px 20px var(--coral-glow);
+  box-shadow: 0 4px 20px var(--brand-blue-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px var(--coral-glow);
+  box-shadow: 0 8px 32px var(--brand-blue-glow);
 }
 
 .btn-secondary {
@@ -228,18 +245,18 @@ button {
 }
 
 .btn-secondary:hover {
-  border-color: var(--coral);
-  color: var(--coral);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--coral);
-  border: 2px solid var(--coral);
+  color: var(--brand-blue);
+  border: 2px solid var(--brand-blue);
 }
 
 .btn-outline:hover {
-  background: var(--coral);
+  background: var(--brand-blue);
   color: #ffffff;
 }
 
@@ -259,8 +276,8 @@ button {
 }
 
 .card-highlight {
-  border-color: var(--coral);
-  box-shadow: 0 8px 40px var(--coral-glow);
+  border-color: var(--brand-blue);
+  box-shadow: 0 8px 40px var(--brand-blue-glow);
 }
 
 /* ===== GLASS MORPHISM (Light Version) ===== */
@@ -368,11 +385,11 @@ button {
 
 .shimmer-text {
   background: linear-gradient(90deg,
-      #ff6b6b 0%,
-      #fcc419 25%,
-      #ff6b6b 50%,
-      #f59e0b 75%,
-      #ff6b6b 100%);
+      #DAAB1F 0%,
+      #e6be47 25%,
+      #DAAB1F 50%,
+      #c99a0c 75%,
+      #DAAB1F 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

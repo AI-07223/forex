@@ -2,15 +2,19 @@
     background: var(--bg-primary);
 }
 
-/* Tiers Grid */
-.tiers-grid {
+/* Sponsor Grid - Centered */
+.sponsor-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     margin-bottom: 64px;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.tier-card {
+.sponsor-card {
     padding: 32px;
     background: var(--bg-primary);
     border: 1px solid var(--glass-border);
@@ -21,23 +25,23 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
-.tier-card:hover {
+.sponsor-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 48px rgba(44, 71, 145, 0.12);
 }
 
-.tier-card.featured {
-    border-color: #ff6b6b;
-    box-shadow: 0 8px 40px rgba(255, 107, 107, 0.15);
+.sponsor-card.featured {
+    border-color: var(--brand-blue);
+    box-shadow: 0 8px 40px rgba(44, 71, 145, 0.15);
 }
 
-.tier-badge {
+.featured-badge {
     position: absolute;
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
     padding: 6px 16px;
-    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -46,40 +50,40 @@
     letter-spacing: 0.5px;
 }
 
-.tier-icon {
+.sponsor-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 72px;
     height: 72px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(252, 196, 25, 0.1));
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.12), rgba(218, 171, 31, 0.08));
     border-radius: 20px;
 }
 
-.tier-icon svg {
-    color: #ff6b6b;
+.sponsor-icon svg {
+    color: var(--brand-blue);
 }
 
-.tier-name {
+.sponsor-name {
     font-size: 1.375rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
-.tier-price {
-    font-family: 'Poppins', sans-serif;
+.sponsor-price {
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 20px;
 }
 
-.tier-features {
+.sponsor-features {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -87,41 +91,39 @@
     margin-bottom: 28px;
 }
 
-.tier-feature {
+.sponsor-features li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
-.tier-feature svg {
-    color: #20c997;
+.sponsor-features li svg {
+    color: var(--brand-green);
     flex-shrink: 0;
     margin-top: 2px;
 }
 
-.tier-cta {
-    width: 100%;
-}
-
 /* Partners Section */
-.partners-section {
+.partner-section {
     margin-bottom: 64px;
 }
 
-.partners-title {
+.partner-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     text-align: center;
     margin-bottom: 32px;
 }
 
-.partners-grid {
+.partner-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .partner-card {
@@ -129,97 +131,91 @@
     background: var(--bg-secondary);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .partner-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 32px rgba(44, 71, 145, 0.1);
 }
 
-.partner-icon {
+.partner-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
-    background: linear-gradient(135deg, rgba(32, 201, 151, 0.15), rgba(77, 171, 247, 0.1));
-    border-radius: 14px;
-    color: #20c997;
+    margin-bottom: 16px;
 }
 
 .partner-name {
     font-size: 1.125rem;
     font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 4px;
+    color: var(--text-primary);
 }
 
 .partner-price {
     font-size: 1rem;
-    font-weight: 600;
-    color: #ff6b6b;
-    margin-bottom: 12px;
+    font-weight: 700;
+    color: var(--brand-gold);
 }
 
-.partner-description {
+.partner-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.partner-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 0.875rem;
-    color: #64748b;
+    color: var(--text-secondary);
+}
+
+.partner-features li svg {
+    color: var(--brand-green);
+    flex-shrink: 0;
 }
 
 /* ROI Section */
 .roi-section {
     padding: 48px;
-    background: linear-gradient(135deg, rgba(32, 201, 151, 0.08) 0%, rgba(77, 171, 247, 0.05) 100%);
-    border: 1px solid rgba(32, 201, 151, 0.2);
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.06) 0%, rgba(218, 171, 31, 0.04) 100%);
+    border: 1px solid rgba(44, 71, 145, 0.12);
     border-radius: 24px;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(32, 201, 151, 0.1);
+    box-shadow: 0 8px 32px rgba(44, 71, 145, 0.08);
 }
 
 .roi-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 12px;
+    color: var(--text-primary);
+    margin-bottom: 24px;
 }
 
-.roi-subtitle {
-    font-size: 1rem;
-    color: #64748b;
-    margin-bottom: 32px;
-}
-
-.roi-metrics {
+.roi-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 64px;
+    gap: 24px;
 }
 
-.roi-metric {
-    text-align: center;
+.roi-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
 }
 
-.roi-value {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #20c997, #4dabf7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: block;
-    line-height: 1;
-}
-
-.roi-label {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-top: 8px;
-    display: block;
+.roi-icon {
+    color: var(--brand-green);
+    font-weight: 700;
 }
 
 /* Responsive */

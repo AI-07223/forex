@@ -17,22 +17,22 @@
     border-radius: 12px;
     font-size: 0.9375rem;
     font-weight: 600;
-    color: #64748b;
+    color: var(--text-muted);
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .schedule-tab:hover {
-    border-color: rgba(255, 107, 107, 0.3);
-    color: #ff6b6b;
+    border-color: rgba(44, 71, 145, 0.3);
+    color: var(--brand-blue);
 }
 
 .schedule-tab.active {
-    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     border-color: transparent;
     color: #ffffff;
-    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 20px rgba(44, 71, 145, 0.3);
 }
 
 .tab-date {
@@ -83,7 +83,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, #ff6b6b 0%, #fcc419 50%, #20c997 100%);
+    background: linear-gradient(180deg, #DAAB1F 0%, #e6be47 50%, #c99a0c 100%);
     border-radius: 1px;
 }
 
@@ -99,8 +99,8 @@
 }
 
 .timeline-item:hover {
-    border-color: rgba(255, 107, 107, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border-color: rgba(44, 71, 145, 0.2);
+    box-shadow: 0 8px 32px rgba(44, 71, 145, 0.1);
 }
 
 .timeline-item::before {
@@ -110,30 +110,30 @@
     top: 32px;
     width: 14px;
     height: 14px;
-    background: linear-gradient(135deg, #ff6b6b, #fcc419);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     border: 3px solid var(--bg-primary);
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 2px 8px rgba(44, 71, 145, 0.3);
 }
 
 .timeline-time {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     font-weight: 600;
-    color: #ff6b6b;
+    color: var(--brand-blue);
     margin-bottom: 8px;
 }
 
 .timeline-title {
     font-size: 1.125rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 6px;
 }
 
 .timeline-description {
     font-size: 0.9375rem;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 .timeline-icon {
@@ -145,20 +145,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(252, 196, 25, 0.1));
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.1), rgba(218, 171, 31, 0.08));
     border-radius: 10px;
-    color: #ff6b6b;
+    color: var(--brand-blue);
 }
 
 /* Evening Event */
 .evening-event {
     margin-top: 40px;
     padding: 32px;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(252, 196, 25, 0.05) 100%);
-    border: 1px solid rgba(255, 107, 107, 0.2);
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.06) 0%, rgba(218, 171, 31, 0.04) 100%);
+    border: 1px solid rgba(44, 71, 145, 0.15);
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.08);
+    box-shadow: 0 8px 32px rgba(44, 71, 145, 0.08);
 }
 
 .evening-badge {
@@ -166,7 +166,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background: linear-gradient(135deg, #ff6b6b, #f59e0b);
+    background: linear-gradient(135deg, #DAAB1F, #e6be47);
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -179,13 +179,13 @@
 .evening-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .evening-description {
     font-size: 0.9375rem;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 /* Responsive */

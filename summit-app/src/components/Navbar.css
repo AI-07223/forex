@@ -32,39 +32,24 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #1e293b;
     text-decoration: none;
 }
 
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    color: #ff6b6b;
-}
-
-.logo-text {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-}
-
-.logo-year {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #ff6b6b;
+.logo-image {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Countdown Timer */
 .navbar-countdown {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
     padding: 10px 18px;
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(252, 196, 25, 0.1) 100%);
-    border: 1px solid rgba(255, 107, 107, 0.2);
+    background: linear-gradient(135deg, rgba(44, 71, 145, 0.1) 0%, rgba(218, 171, 31, 0.1) 100%);
+    border: 1px solid rgba(44, 71, 145, 0.15);
     border-radius: 14px;
 }
 
@@ -72,27 +57,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-width: 36px;
 }
 
 .countdown-value {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
-    color: #ff6b6b;
+    color: var(--brand-blue);
     line-height: 1;
 }
 
 .countdown-label {
     font-size: 0.625rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 2px;
 }
 
 .countdown-separator {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     color: #cbd5e1;
@@ -118,8 +104,8 @@
 }
 
 .nav-link:hover {
-    color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.08);
+    color: var(--brand-blue);
+    background: rgba(44, 71, 145, 0.08);
 }
 
 /* CTA Button */
@@ -128,16 +114,16 @@
     font-size: 0.9375rem;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #ff6b6b 0%, #f59e0b 100%);
+    background: linear-gradient(135deg, #DAAB1F 0%, #e6be47 100%);
     border-radius: 10px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.25);
+    box-shadow: 0 4px 16px rgba(218, 171, 31, 0.3);
 }
 
 .navbar-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(255, 107, 107, 0.35);
+    box-shadow: 0 6px 24px rgba(218, 171, 31, 0.45);
 }
 
 /* Mobile Menu Button */
@@ -187,8 +173,8 @@
 }
 
 .mobile-nav-link:hover {
-    color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.08);
+    color: var(--brand-gold);
+    background: rgba(218, 171, 31, 0.1);
 }
 
 .mobile-cta {
@@ -198,7 +184,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #ff6b6b 0%, #f59e0b 100%);
+    background: linear-gradient(135deg, #DAAB1F 0%, #e6be47 100%);
     border-radius: 10px;
     text-decoration: none;
 }

@@ -2,6 +2,13 @@ import { MapPin, Waves, Building2, Utensils, Wifi, Car } from 'lucide-react';
 import './Venue.css';
 
 const Venue = () => {
+    const venueImages = [
+        { src: '/images/venue-exterior.jpg', title: 'Royal Cliff Beach Resort', description: 'Premium beachfront destination' },
+        { src: '/images/venue-pool.jpg', title: 'Infinity Pool & Ocean Views', description: 'Stunning sunset vistas' },
+        { src: '/images/venue-lounge.jpg', title: 'Executive Lounge', description: 'Premium networking spaces' },
+        { src: '/images/venue-dining.jpg', title: 'Fine Dining', description: 'World-class cuisine' }
+    ];
+
     const features = [
         { icon: <Building2 size={24} />, title: 'World-Class Convention Halls', description: 'State-of-the-art facilities' },
         { icon: <Waves size={24} />, title: 'Beachfront Entertainment', description: 'Stunning ocean views' },
@@ -28,36 +35,19 @@ const Venue = () => {
                     </p>
                 </div>
 
-                {/* Venue Visual */}
-                <div className="venue-showcase">
-                    <div className="venue-image">
-                        <div className="venue-overlay">
-                            <div className="venue-location">
-                                <MapPin size={24} />
-                                <div>
-                                    <h3>Pattaya, Thailand</h3>
-                                    <p>Royal Cliff Beach Resort</p>
-                                </div>
+                {/* Venue Image Gallery */}
+                <div className="venue-gallery">
+                    {venueImages.map((image, index) => (
+                        <div key={index} className="venue-card">
+                            <div className="venue-card-image">
+                                <img src={image.src} alt={image.title} loading="lazy" />
+                            </div>
+                            <div className="venue-card-content">
+                                <h4>{image.title}</h4>
+                                <p>{image.description}</p>
                             </div>
                         </div>
-                        {/* Gradient background instead of image */}
-                        <div className="venue-gradient"></div>
-                    </div>
-
-                    <div className="venue-info-cards">
-                        <div className="venue-info-card">
-                            <h4>Convention Center</h4>
-                            <p>50,000+ sq.ft of versatile event space with cutting-edge AV equipment</p>
-                        </div>
-                        <div className="venue-info-card">
-                            <h4>Ocean View</h4>
-                            <p>Spectacular beachfront setting overlooking the Gulf of Thailand</p>
-                        </div>
-                        <div className="venue-info-card">
-                            <h4>Luxury Rooms</h4>
-                            <p>1,000+ premium rooms across four distinct hotels on the property</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 {/* Features Grid */}
@@ -65,7 +55,7 @@ const Venue = () => {
                     {features.map((feature, index) => (
                         <div key={index} className="venue-feature">
                             <div className="feature-icon">{feature.icon}</div>
-                            <div>
+                            <div className="feature-text">
                                 <h4>{feature.title}</h4>
                                 <p>{feature.description}</p>
                             </div>
