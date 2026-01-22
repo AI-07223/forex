@@ -3,10 +3,14 @@ import './Venue.css';
 
 const Venue = () => {
     const venueImages = [
-        { src: '/images/venue-exterior.jpg', title: 'Royal Cliff Beach Resort', description: 'Premium beachfront destination' },
-        { src: '/images/venue-pool.jpg', title: 'Infinity Pool & Ocean Views', description: 'Stunning sunset vistas' },
-        { src: '/images/venue-lounge.jpg', title: 'Executive Lounge', description: 'Premium networking spaces' },
-        { src: '/images/venue-dining.jpg', title: 'Fine Dining', description: 'World-class cuisine' }
+        { src: '/images/venue/peach-convention-hall.jpg', title: 'PEACH Convention Center', description: 'World-class convention facilities' },
+        { src: '/images/venue/grand-lobby.jpg', title: 'Grand Lobby', description: 'Elegant resort entrance' },
+        { src: '/images/venue/executive-lounge.jpg', title: 'Executive Lounge', description: 'Premium networking spaces' },
+        { src: '/images/venue/fine-dining.jpg', title: 'Fine Dining', description: 'Exquisite culinary experience' },
+        { src: '/images/venue/ocean-view-suite.jpg', title: 'Ocean View Suite', description: 'Luxury beachfront accommodation' },
+        { src: '/images/venue/infinity-pool-sunset.jpg', title: 'Infinity Pool', description: 'Stunning sunset views' },
+        { src: '/images/venue/resort-pool.jpg', title: 'Resort Pool & Spa', description: 'Relaxation paradise' },
+        { src: '/images/venue/resort-evening.jpg', title: 'Resort Evening', description: 'Breathtaking night ambiance' }
     ];
 
     const features = [

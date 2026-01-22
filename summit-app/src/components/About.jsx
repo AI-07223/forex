@@ -48,11 +48,21 @@ const About = () => {
                         <br />
                         <span className="gradient-text">A Premium Global Trading Experience</span>
                     </h2>
-                    <p className="section-subtitle">
-                        Elite Traders Summit 2026 is an exclusive, invitation-only international summit
-                        designed to unite the entire global trading ecosystem under one luxury destination.
-                    </p>
                 </div>
+
+                {/* About the Event Content */}
+                <div className="about-content">
+                    <h3 className="about-content-title">About the Event</h3>
+                    <div className="about-content-text">
+                        <p>
+                            <span className="highlight">Elite Traders Summit 2026</span> is a premium, invitation-only global gathering designed for the leaders of the <span className="highlight">Forex, Crypto, and Blockchain ecosystem</span>. Hosted in <span className="highlight">Pattaya, Thailand</span> from <span className="highlight">1–3 May 2026</span>, the summit brings together top brokers, professional traders, institutional partners, educators, and influential voices from across the world under one roof. This is not a conventional expo or seminar, but a carefully curated experience focused on meaningful networking, strategic partnerships, and long-term business growth.
+                        </p>
+                        <p>
+                            Over three immersive days, attendees will engage in high-impact keynote sessions, panel discussions, closed-door networking, and brand showcases, complemented by exclusive evening experiences including award ceremonies, gala dinners, and premium entertainment. <span className="highlight">Elite Traders Summit</span> is built to create real value — enabling brokers to expand their IB networks, traders to connect directly with global platforms, and influencers to collaborate with leading brands. The summit sets a new benchmark for luxury, professionalism, and results-driven engagement in the global trading industry.
+                        </p>
+                    </div>
+                </div>
+
 
                 {/* Vision Statement */}
                 <div className="vision-card">
