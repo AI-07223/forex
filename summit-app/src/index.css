@@ -1015,6 +1015,35 @@ a:focus-visible {
   }
 }
 
+/* Very small screens - ensure consistent centering */
+@media (max-width: 370px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .section-badge {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9375rem;
+  }
+}
+
 /* ===== SCROLL ANIMATIONS ===== */
 .animate-on-scroll {
   opacity: 0;

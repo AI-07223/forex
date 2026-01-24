@@ -303,8 +303,8 @@
     }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* Responsive - Standard Breakpoints */
+@media (max-width: 1024px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }

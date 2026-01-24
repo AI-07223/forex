@@ -2,20 +2,17 @@
     background: var(--bg-primary);
 }
 
-/* Sponsor Grid - Centered */
+/* Sponsor Grid - 1x4 Desktop, 2x2 Tablet, 4x1 Mobile */
 .sponsor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-bottom: 64px;
-    justify-content: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: stretch;
 }
 
 .sponsor-card {
-    padding: 32px;
+    padding: 24px 20px;
     background: var(--bg-primary);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
@@ -23,6 +20,9 @@
     transition: all 0.3s ease;
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .sponsor-card:hover {
@@ -89,6 +89,7 @@
     gap: 12px;
     text-align: left;
     margin-bottom: 28px;
+    flex-grow: 1;
 }
 
 .sponsor-features li {
@@ -218,14 +219,32 @@
     font-weight: 700;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* Responsive - Standard Breakpoints */
+@media (max-width: 1024px) {
+    .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .tiers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .sponsor-card {
+        padding: 24px 16px;
+    }
+
+    .sponsor-price {
+        font-size: 1.75rem;
+    }
+
     .tiers-grid {
         grid-template-columns: 1fr;
     }
@@ -241,5 +260,58 @@
 
     .roi-section {
         padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-card {
+        padding: 20px 12px;
+    }
+
+    .sponsor-name {
+        font-size: 1.125rem;
+    }
+
+    .sponsor-price {
+        font-size: 1.5rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 370px) {
+    .sponsor-card {
+        padding: 16px 10px;
+        border-radius: 16px;
+    }
+
+    .sponsor-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .sponsor-name {
+        font-size: 1rem;
+    }
+
+    .sponsor-price {
+        font-size: 1.375rem;
+        margin-bottom: 16px;
+    }
+
+    .sponsor-features li {
+        font-size: 0.8125rem;
+    }
+
+    .partner-card {
+        padding: 20px;
+    }
+
+    .roi-section {
+        padding: 24px 16px;
+    }
+
+    .roi-item {
+        padding: 10px 14px;
+        font-size: 0.8125rem;
     }
 }

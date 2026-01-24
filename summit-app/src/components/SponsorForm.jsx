@@ -185,7 +185,7 @@ const SponsorForm = () => {
                     </p>
                 </div>
 
-                <div className="sponsor-grid">
+                <div className="sponsor-inquiry-grid">
                     {/* Benefits Side */}
                     <div className="sponsor-benefits-panel">
                         <div className="benefits-card">

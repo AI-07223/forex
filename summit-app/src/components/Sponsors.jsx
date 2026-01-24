@@ -123,7 +123,7 @@ const Sponsors = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <a href="#register" className={`btn ${tier.featured ? 'btn-primary' : 'btn-secondary'}`}>
+                            <a href="#become-sponsor" className={`btn ${tier.featured ? 'btn-primary' : 'btn-secondary'}`}>
                                 Inquire Now
                             </a>
                         </div>
