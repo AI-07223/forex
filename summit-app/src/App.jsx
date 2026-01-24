@@ -8,8 +8,11 @@ import Sponsors from './components/Sponsors';
 import Venue from './components/Venue';
 import Awards from './components/Awards';
 import FAQ from './components/FAQ';
+import SponsorForm from './components/SponsorForm';
 import Register from './components/Register';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -24,9 +27,12 @@ function App() {
         <Venue />
         <Awards />
         <FAQ />
+        <SponsorForm />
         <Register />
+        <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

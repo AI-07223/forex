@@ -7,8 +7,8 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-    // Event date: April 24, 2026
-    const eventDate = new Date('2026-04-24T09:00:00').getTime();
+    // Event date: May 1, 2026
+    const eventDate = new Date('2026-05-01T09:00:00').getTime();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,7 +41,8 @@ const Navbar = () => {
         { href: '#schedule', label: 'Schedule' },
         { href: '#sponsors', label: 'Sponsors' },
         { href: '#venue', label: 'Venue' },
-        { href: '#faq', label: 'FAQ' }
+        { href: '#faq', label: 'FAQ' },
+        { href: '#contact', label: 'Contact' }
     ];
 
     return (

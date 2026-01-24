@@ -30,7 +30,7 @@ const Footer = () => {
                             Asia's Premium Forex, Crypto & Trading Experience
                         </p>
                         <div className="footer-event-info">
-                            <p><strong>April 24-26, 2026</strong></p>
+                            <p><strong>May 1-3, 2026</strong></p>
                             <p>Royal Cliff & PEACH Convention Center</p>
                             <p>Pattaya, Thailand</p>
                         </div>

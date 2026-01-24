@@ -42,7 +42,7 @@ const Awards = () => {
                             </div>
                         </div>
                         <p className="awards-note">
-                            April 25, 2026 • Evening • Royal Cliff Grand Ballroom
+                            May 2, 2026 • Evening • Royal Cliff Grand Ballroom
                         </p>
                     </div>
 

@@ -8,7 +8,7 @@ const Schedule = () => {
     const days = [
         {
             day: 'Day 1',
-            date: 'April 24, 2026',
+            date: 'May 1, 2026',
             theme: 'Global Connect',
             focus: 'Opening • Networking • Brand Visibility',
             sessions: [
@@ -27,7 +27,7 @@ const Schedule = () => {
         },
         {
             day: 'Day 2',
-            date: 'April 25, 2026',
+            date: 'May 2, 2026',
             theme: 'Innovation & Recognition',
             focus: 'Learning • Partnerships • Awards',
             sessions: [
@@ -46,7 +46,7 @@ const Schedule = () => {
         },
         {
             day: 'Day 3',
-            date: 'April 26, 2026',
+            date: 'May 3, 2026',
             theme: 'Community & Farewell',
             focus: 'Future Vision • Celebration',
             sessions: [

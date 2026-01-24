@@ -162,7 +162,7 @@ const Hero = () => {
                 <div className="hero-info">
                     <div className="info-item">
                         <Calendar size={20} />
-                        <span>24-26 April 2026</span>
+                        <span>1-3 May 2026</span>
                     </div>
                     <div className="info-divider"></div>
                     <div className="info-item">

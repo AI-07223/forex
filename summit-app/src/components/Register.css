@@ -1,150 +1,123 @@
 .register {
     background: var(--bg-primary);
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
-.register-card {
-    position: relative;
-    padding: 80px 60px;
-    background: linear-gradient(135deg, rgba(218, 171, 31, 0.06) 0%, rgba(44, 71, 145, 0.04) 100%);
-    border: 1px solid rgba(218, 171, 31, 0.15);
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 16px 64px rgba(218, 171, 31, 0.1);
-}
-
-.register-bg {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-}
-
-.register-gradient {
-    position: absolute;
-    top: -50%;
-    left: -25%;
-    width: 150%;
-    height: 150%;
-    background: radial-gradient(circle at 30% 50%, rgba(44, 71, 145, 0.12) 0%, transparent 50%);
-    animation: rotateGradient 20s linear infinite;
-}
-
-@keyframes rotateGradient {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.register-pattern {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle at center, rgba(44, 71, 145, 0.06) 1px, transparent 1px);
-    background-size: 30px 30px;
-}
-
-.register-content {
-    position: relative;
-    z-index: 1;
+.register-header {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 700px;
+    margin: 0 auto 60px;
 }
 
-.register-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #DAAB1F, #e6be47);
+.register-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Info Panel */
+.register-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
     border-radius: 20px;
-    color: #ffffff;
-    margin-bottom: 32px;
-    animation: float 3s ease-in-out infinite;
-    box-shadow: 0 8px 32px rgba(218, 171, 31, 0.3);
+    padding: 28px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-.register-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+.info-card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
-.register-description {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    margin-bottom: 32px;
-    line-height: 1.7;
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.register-info {
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.info-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 40px;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, rgba(218, 171, 31, 0.1), rgba(44, 71, 145, 0.1));
+    border-radius: 12px;
+    color: var(--brand-gold);
 }
 
-.info-tag {
+.info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-method {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
+    gap: 12px;
+    padding: 14px 16px;
     background: var(--bg-primary);
     border: 1px solid var(--glass-border);
-    border-radius: 100px;
+    border-radius: 12px;
+    color: var(--text-secondary);
     font-size: 0.9375rem;
     font-weight: 500;
-    color: var(--text-secondary);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.info-tag svg {
+.contact-method:hover {
+    border-color: var(--brand-gold);
+    color: var(--brand-gold);
+    transform: translateX(4px);
+}
+
+.contact-method svg {
     color: var(--brand-blue);
+    flex-shrink: 0;
 }
 
-.register-actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 48px;
-}
-
-.btn-lg {
-    padding: 18px 36px;
-    font-size: 1.0625rem;
-}
-
-/* Stats */
+/* Stats in info panel */
 .register-stats {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 32px;
-    background: var(--bg-primary);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(218, 171, 31, 0.08) 0%, rgba(44, 71, 145, 0.06) 100%);
+    border: 1px solid rgba(218, 171, 31, 0.15);
+    border-radius: 20px;
 }
 
 .register-stat {
@@ -154,7 +127,7 @@
 .stat-number {
     display: block;
     font-family: 'Inter', sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, #DAAB1F, #e6be47);
     -webkit-background-clip: text;
@@ -165,45 +138,241 @@
 
 .stat-text {
     display: block;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     margin-top: 6px;
 }
 
-.register-divider {
-    width: 1px;
-    height: 40px;
-    background: var(--glass-border);
+/* Form Panel */
+.register-form-panel {
+    position: sticky;
+    top: 100px;
+}
+
+.form-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.form-header {
+    margin-bottom: 28px;
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+}
+
+/* Form Styles */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group label svg {
+    color: var(--brand-blue);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-gold);
+    box-shadow: 0 0 0 3px rgba(218, 171, 31, 0.1);
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+    padding-right: 48px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit.submitting {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-submit.submitted {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.btn-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: 8px;
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-form-panel {
+        position: static;
+    }
+}
+
 @media (max-width: 768px) {
-    .register-card {
-        padding: 48px 24px;
+    .register {
+        padding: 60px 0;
     }
 
-    .register-info {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .register-actions {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-    }
-
-    .register-actions .btn {
-        width: 100%;
+    .form-card {
+        padding: 24px;
     }
 
     .register-stats {
-        flex-direction: column;
-        gap: 24px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .register-divider {
-        width: 60px;
-        height: 1px;
+    .register-stat {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
     }
+
+    .stat-text {
+        margin-top: 0;
+    }
+}
+
+/* Error States */
+.required {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea,
+.input-error {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.04);
+}
+
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ef4444;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.error-message svg {
+    flex-shrink: 0;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-4px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(4px);
+    }
+}
+
+.form-group.has-error {
+    animation: shake 0.4s ease;
 }

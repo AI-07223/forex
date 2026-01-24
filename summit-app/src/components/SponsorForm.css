@@ -1,0 +1,385 @@
+.sponsor-form {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    padding: 100px 0;
+}
+
+.sponsor-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Benefits Panel */
+.sponsor-benefits-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.benefits-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.benefits-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(218, 171, 31, 0.12), rgba(44, 71, 145, 0.08));
+    border-radius: 10px;
+    color: var(--brand-gold);
+    flex-shrink: 0;
+}
+
+/* Packages Preview */
+.packages-preview {
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.packages-preview h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.package-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.package-tag {
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.package-tag:hover {
+    border-color: var(--brand-gold);
+    transform: translateY(-2px);
+}
+
+.package-tag.title {
+    background: linear-gradient(135deg, rgba(218, 171, 31, 0.15), rgba(218, 171, 31, 0.08));
+    border-color: rgba(218, 171, 31, 0.3);
+    color: var(--brand-gold);
+}
+
+.package-tag.platinum {
+    background: linear-gradient(135deg, rgba(148, 163, 184, 0.15), rgba(148, 163, 184, 0.08));
+    border-color: rgba(148, 163, 184, 0.3);
+    color: #94a3b8;
+}
+
+.package-tag.gold {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 191, 36, 0.08));
+    border-color: rgba(251, 191, 36, 0.3);
+    color: #f59e0b;
+}
+
+.package-tag.silver {
+    background: linear-gradient(135deg, rgba(156, 163, 175, 0.15), rgba(156, 163, 175, 0.08));
+    border-color: rgba(156, 163, 175, 0.3);
+    color: #9ca3af;
+}
+
+/* CTA Box */
+.sponsor-cta-box {
+    background: linear-gradient(135deg, rgba(218, 171, 31, 0.1) 0%, rgba(44, 71, 145, 0.08) 100%);
+    border: 1px solid rgba(218, 171, 31, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+}
+
+.sponsor-cta-box p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--brand-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+    gap: 12px;
+}
+
+/* Form Panel */
+.sponsor-form-panel {
+    position: sticky;
+    top: 100px;
+}
+
+.sponsor-form-panel .form-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.sponsor-form-panel .form-header {
+    margin-bottom: 28px;
+}
+
+.sponsor-form-panel .form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.sponsor-form-panel .form-header p {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+}
+
+/* Form Styles */
+.sponsor-inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sponsor-inquiry-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sponsor-inquiry-form .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sponsor-inquiry-form .form-group label svg {
+    color: var(--brand-blue);
+}
+
+.sponsor-inquiry-form .form-group input,
+.sponsor-inquiry-form .form-group select,
+.sponsor-inquiry-form .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.sponsor-inquiry-form .form-group input::placeholder,
+.sponsor-inquiry-form .form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.sponsor-inquiry-form .form-group input:focus,
+.sponsor-inquiry-form .form-group select:focus,
+.sponsor-inquiry-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-gold);
+    box-shadow: 0 0 0 3px rgba(218, 171, 31, 0.1);
+}
+
+.sponsor-inquiry-form .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+    padding-right: 48px;
+}
+
+.sponsor-inquiry-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Submit Button */
+.sponsor-inquiry-form .btn-submit {
+    width: 100%;
+    padding: 18px 24px;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-inquiry-form .btn-submit.submitting {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.sponsor-inquiry-form .btn-submit.submitted {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.sponsor-inquiry-form .btn-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sponsor-inquiry-form .form-note {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-form-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-form {
+        padding: 60px 0;
+    }
+
+    .sponsor-form-panel .form-card {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Error States */
+.required {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.sponsor-inquiry-form .form-group.has-error input,
+.sponsor-inquiry-form .form-group.has-error select,
+.sponsor-inquiry-form .form-group.has-error textarea,
+.sponsor-inquiry-form .input-error {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.04);
+}
+
+.sponsor-inquiry-form .form-group.has-error input:focus,
+.sponsor-inquiry-form .form-group.has-error select:focus,
+.sponsor-inquiry-form .form-group.has-error textarea:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.sponsor-inquiry-form .error-message {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ef4444;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.sponsor-inquiry-form .error-message svg {
+    flex-shrink: 0;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-4px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(4px);
+    }
+}
+
+.sponsor-inquiry-form .form-group.has-error {
+    animation: shake 0.4s ease;
+}
